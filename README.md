@@ -37,6 +37,8 @@ More details [here](https://docs.github.com/en/actions/using-jobs/using-conditio
 - [Echoes 'hello world'](https://github.com/sombriks/gh-actions-playground/actions/runs/7162121699/job/19498652966#step:2:5)
 - Amazingly useless
 
+![image-manual-dispatch.png](imgs/image-manual-dispatch.png)
+
 ## 01 - [occurs on every git push or merge](.github/workflows/01-it-happens-on-push.yml)
 
 - The 101 of CI
