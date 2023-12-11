@@ -1,0 +1,11 @@
+name: Hello world but on git push!
+
+on:
+    push: 
+        branches: ['*'] 
+
+jobs:
+    hello-world-on-push:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "hello world from ${{github.ref_name}}!"
