@@ -1,6 +1,6 @@
 # My gh-actions playground
 
-small examples of interesting github actions combinations
+Small examples of interesting github actions combinations.
 
 ## Overview
 
@@ -8,9 +8,9 @@ GitHub Actions is what happens when yaml and bash decide to have a child.
 
 Each workflow file must define:
 
-- name (unique across all workflows)
-- on (event)
-- jobs (actual work)
+- _name_ (unique across all workflows)
+- _on_ (event)
+- _jobs_ (actual work)
 
 ### Events
 
@@ -26,7 +26,7 @@ More possibilities [here](https://docs.github.com/en/actions/using-workflows/eve
 
 - Give cool names to your jobs, not just _build_
 - One workflow can hold several jobs
-- Jobs will runn in **parallel** unless you do something about it
+- Jobs will run in **parallel** unless you do something about it
   - make jobs `needs` other jobs
 
 More details [here](https://docs.github.com/en/actions/using-jobs/using-conditions-to-control-job-execution).
@@ -43,3 +43,25 @@ More details [here](https://docs.github.com/en/actions/using-jobs/using-conditio
 
 - The 101 of CI
 - [Quite useless](https://github.com/sombriks/gh-actions-playground/actions/runs/7162222469/job/19498893130#step:2:5)
+
+## 02 - have two jobs
+
+## 03 - have two jobs but in sequence
+
+## 04 - make one job use another
+
+## 05 - jobs inputs
+
+## 06 - jobs outputs
+
+## 07 - environment variables
+
+## 08 - secrets
+
+## 09 - steps
+
+## 10 - use 3rd actions
+
+## 11 - noteworthy actions
+
+## 12 - writing good CI/CD pipelines
