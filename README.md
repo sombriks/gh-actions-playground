@@ -33,10 +33,11 @@ More details [here](https://docs.github.com/en/actions/using-jobs/using-conditio
 
 ## 00 - [smallest possible](.github/workflows/00-hello-world.yml)
 
-- [manual dispatch](https://github.com/sombriks/gh-actions-playground/actions/workflows/00-hello-world.yml)
-- [echoes hello world](https://github.com/sombriks/gh-actions-playground/actions/runs/7162121699/job/19498652966#step:2:5)
-- amazingly useless
+- [Manual dispatch](https://github.com/sombriks/gh-actions-playground/actions/workflows/00-hello-world.yml)
+- [Echoes 'hello world'](https://github.com/sombriks/gh-actions-playground/actions/runs/7162121699/job/19498652966#step:2:5)
+- Amazingly useless
 
 ## 01 - [occurs on every git push or merge](.github/workflows/01-it-happens-on-push.yml)
 
-- [the 101 of CI]()
+- The 101 of CI
+- [Quite useless](https://github.com/sombriks/gh-actions-playground/actions/runs/7162222469/job/19498893130#step:2:5)
