@@ -1,4 +1,4 @@
-# My gh-actions-playground
+# My gh-actions playground
 
 small examples of interesting github actions combinations
 
