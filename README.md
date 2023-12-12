@@ -76,7 +76,13 @@ More details [here][4].
 
 - Make sure the second [needs][16] the first
 
-## 04 - make one job use another
+![job-needs.png][17]
+
+## 04 - [make one job use another workflow][18]
+
+- This is why [workflow_call][19] exists
+- Don't misread as [workflow_dispatch][20], it's another thing
+- Quite similar to what we do when [consuming actions from marketplace][21]
 
 ## 05 - jobs inputs
 
@@ -102,16 +108,26 @@ More details [here][4].
 [5]: .github/workflows/00-hello-world.yml
 [6]: https://github.com/sombriks/gh-actions-playground/actions/workflows/00-hello-world.yml
 [7]: https://github.com/sombriks/gh-actions-playground/actions/runs/7162121699/job/19498652966#step:2:5
-[8]: imgs/image-manual-dispatch.png
+[8]: imgs/manual-dispatch.png
 [9]: .github/workflows/01-it-happens-on-push.yml
 [10]: https://github.com/sombriks/gh-actions-playground/actions/runs/7162222469/job/19498893130#step:2:5
-[11]: imgs/image-on-push.png
+[11]: imgs/on-push.png
 [12]: .github/workflows/02-two-jobs.yml
 [13]: https://github.com/sombriks/gh-actions-playground/actions/runs/7175366895/job/19538528783
 [14]: imgs/two-jobs.png
 [15]: .github/workflows/03-sequence-jobs.yml
 [16]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
-[17]:
-[18]:
-[19]:
-[20]:
+[17]: imgs/job-needs.png
+[18]: .github/workflows/04-use-workflow.yml
+[19]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_call
+[20]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_dispatch
+[21]: https://github.com/marketplace?type=actions
+[22]:
+[23]:
+[24]:
+[25]:
+[26]:
+[27]:
+[28]:
+[29]:
+[30]:

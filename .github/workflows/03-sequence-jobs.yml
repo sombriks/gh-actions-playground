@@ -1,7 +1,9 @@
 name: 03 - Sequence jobs
 
 on:
-    workflow_dispatch: 
+    workflow_dispatch:
+    # see the next workflow to understand this 
+    workflow_call: 
 
 jobs:
     job-one:
