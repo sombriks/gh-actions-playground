@@ -91,6 +91,8 @@ More details [here][4].
 - Both `workflow_call` and `workflow_dispatch` can receive inputs
 - Use [inputs][24] inside the steps inside jobs
 
+![job-input.png][25]
+
 ## 06 - jobs outputs
 
 - If a job needs another, you can check on outputs values from needed jobs
@@ -162,7 +164,7 @@ There's much, much more!
 [22]: imgs/use-another-workflow.png
 [23]: .github/workflows/05-job-inputs.yml
 [24]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-of-onworkflow_dispatchinputs
-[25]:
+[25]: imgs/job-input.png
 [26]:
 [27]:
 [28]:
