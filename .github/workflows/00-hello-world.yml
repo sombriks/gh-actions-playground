@@ -1,4 +1,4 @@
-name: Hello world!
+name: 00 - Hello world!
 
 on:
     workflow_dispatch: 

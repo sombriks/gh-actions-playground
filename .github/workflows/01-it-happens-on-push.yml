@@ -1,4 +1,4 @@
-name: Hello world but on git push!
+name: 01 - Hello world but on git push!
 
 on:
     push: 
