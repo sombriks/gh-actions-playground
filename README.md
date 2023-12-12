@@ -63,13 +63,18 @@ More details [here][4].
 - The 101 of CI
 - [Echoes 'hello word from _some branch_'][10]
 
-![image-on-push.png](imgs/image-on-push.png)
+![image-on-push.png][11]
 
-## 02 - [have two jobs][11]
+## 02 - [have two jobs][12]
 
-- Remember, runs in **parallel**!
+- Remember, runs in [parallel][13]!
+- Pretty much like two distinct workflows, but sharing rent of a workflow file
 
-## 03 - have two jobs but in sequence
+![two-jobs.png][14]
+
+## 03 - [have two jobs but in sequence][15]
+
+- Make sure the second [needs][16] the first
 
 ## 04 - make one job use another
 
@@ -100,12 +105,12 @@ More details [here][4].
 [8]: imgs/image-manual-dispatch.png
 [9]: .github/workflows/01-it-happens-on-push.yml
 [10]: https://github.com/sombriks/gh-actions-playground/actions/runs/7162222469/job/19498893130#step:2:5
-[11]: .github/workflows/02-two-jobs.yml
-[12]:
-[13]:
-[14]:
-[15]:
-[16]:
+[11]: imgs/image-on-push.png
+[12]: .github/workflows/02-two-jobs.yml
+[13]: https://github.com/sombriks/gh-actions-playground/actions/runs/7175366895/job/19538528783
+[14]: imgs/two-jobs.png
+[15]: .github/workflows/03-sequence-jobs.yml
+[16]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
 [17]:
 [18]:
 [19]:

@@ -1,0 +1,17 @@
+name: 03 - Sequence jobs
+
+on:
+    workflow_dispatch: 
+
+jobs:
+    job-one:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "hello first!"
+    
+    job-two:
+        runs-on: ubuntu-latest
+        needs: [job-one]           
+        steps:
+            - run: echo "hello second!"
+        
