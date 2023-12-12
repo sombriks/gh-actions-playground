@@ -84,21 +84,58 @@ More details [here][4].
 - Don't misread as [workflow_dispatch][20], it's another thing
 - Quite similar to what we do when [consuming actions from marketplace][21]
 
-## 05 - jobs inputs
+![use-another-workflow.png][22]
+
+## 05 - [jobs inputs][23]
+
+- Both `workflow_call` and `workflow_dispatch` can receive inputs
+- Use [inputs][24] inside the steps inside jobs
 
 ## 06 - jobs outputs
 
+- If a job needs another, you can check on outputs values from needed jobs
+- The data processing flows, one output at a time
+
 ## 07 - environment variables
+
+- The repository itself can contribute with custom execution
 
 ## 08 - secrets
 
+- Very useful to interact with the world outside the repo
+- Define secrets via web console settings
+- Or use GitHub CLI to create them, pretty handy!
+
 ## 09 - steps
 
-## 10 - use 3rd actions
+- Simplest step is a run command
+- Complex ones make use of external actions from marketplace
+- Give proper names for your steps
+
+## 10 - use 3rd party actions
+
+- This is why GitHub Actions it's better than other CI tools from other vendors
+- Rich ecosystem
 
 ## 11 - noteworthy actions
 
+- Java
+- Node
+- Docker
+- AWS Actions
+- Upload
+- Download
+- Checkout
+
+There's much, much more!
+
 ## 12 - writing good CI/CD pipelines
+
+- Run tests
+- Publish packages or images
+- For GitOps, update _desired state_ on IaC manifests files
+
+## Conclusion
 
 [0]: https://github.com/nektos/act?tab=readme-ov-file#installation-through-package-managers
 [1]: https://github.com/sombriks/gh-actions-playground/actions
@@ -122,12 +159,22 @@ More details [here][4].
 [19]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_call
 [20]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_dispatch
 [21]: https://github.com/marketplace?type=actions
-[22]:
-[23]:
-[24]:
+[22]: imgs/use-another-workflow.png
+[23]: .github/workflows/05-job-inputs.yml
+[24]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-of-onworkflow_dispatchinputs
 [25]:
 [26]:
 [27]:
 [28]:
 [29]:
 [30]:
+[31]:
+[32]:
+[33]:
+[34]:
+[35]:
+[36]:
+[37]:
+[38]:
+[39]:
+[40]:
