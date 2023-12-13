@@ -119,7 +119,21 @@ X="some value from vars"
 - Very useful to interact with the world outside the repo
 - Define secrets via web console settings
 - Or use GitHub CLI to create them, pretty handy!
-- With act, just put it inside a .env file!
+- With act, just put it inside a `.secrets` file!
+- Note: **secret values are [not echoed][33] on logs**
+
+```bash
+# ~/github/gh-actions-playground/.vars
+X=10
+MY_SECRET="not telling you!"
+```
+
+```bash
+[sombriks@thanatos gh-actions-playground](main)$ gh secret set X
+? Paste your secret **
+
+✓ Set Actions secret X for sombriks/gh-actions-playground
+```
 
 ## 09 - steps
 
@@ -185,7 +199,7 @@ There's much, much more!
 [30]: https://docs.github.com/en/actions/learn-github-actions/variables#using-contexts-to-access-variable-values
 [31]: imgs/repository-variables.png
 [32]: .github/workflows/08-using-secrets.yml
-[33]:
+[33]: https://github.com/sombriks/gh-actions-playground/actions/runs/7189569566/job/19581317663#step:2:2
 [34]:
 [35]:
 [36]:
