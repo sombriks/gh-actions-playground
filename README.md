@@ -93,10 +93,10 @@ More details [here][4].
 
 ![job-input.png][25]
 
-## 06 - jobs outputs
+## 06 - [jobs outputs][26]
 
-- If a job needs another, you can check on outputs values from needed jobs
-- The data processing flows, one output at a time
+- You can define [outputs values][27] so other jobs can check on
+- For dynamic outputs check the `$GITHUB_OUTPUT` variable usage
 
 ## 07 - environment variables
 
@@ -165,8 +165,8 @@ There's much, much more!
 [23]: .github/workflows/05-job-inputs.yml
 [24]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-of-onworkflow_dispatchinputs
 [25]: imgs/job-input.png
-[26]:
-[27]:
+[26]: .github/workflows/06-job-outputs.yml
+[27]: https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs
 [28]:
 [29]:
 [30]:

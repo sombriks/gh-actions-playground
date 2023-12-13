@@ -1,0 +1,32 @@
+name: 06 - Job outputs
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  simple-output:
+    runs-on: ubuntu-latest
+    outputs:
+      my-output: 'general kenobi!'
+    steps:
+      - run: echo "hello there!"
+  
+  use-simple-output:
+    runs-on: ubuntu-latest
+    needs: simple-output
+    steps:
+      - run: echo "${{needs.simple-output.outputs.my-output}}"
+  
+  output-from-step:
+    runs-on: ubuntu-latest
+    outputs:
+      from-step-2: ${{ steps.step2.outputs.custom_result }}
+    steps:
+      - id: step2
+        run: echo "custom_result=$(date +'%Y')" >> $GITHUB_OUTPUT
+      
+  use-output-from-step:
+    runs-on: ubuntu-latest
+    needs: [output-from-step]
+    steps:
+      - run: echo "i got a dynamic value from ${{needs.output-from-step.outputs.from-step-2}}"
