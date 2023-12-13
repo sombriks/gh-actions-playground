@@ -34,7 +34,7 @@ Each workflow file must define:
 
 ### Events
 
-What could possibly trigger an workflow
+What could possibly trigger an workflow?
 
 - You hit a button
 - A git push or something
@@ -135,36 +135,40 @@ MY_SECRET="not telling you!"
 ✓ Set Actions secret X for sombriks/gh-actions-playground
 ```
 
-## 09 - steps
+## 09 - [steps][34]
 
-- Simplest step is a run command
-- Complex ones make use of external actions from marketplace
-- Give proper names for your steps
+- Simplest step is a `run` command
+- Complex ones `uses` external actions from [marketplace][21]
+- Give proper `names` for your steps
 
-## 10 - use 3rd party actions
+More details of what is possible [here][35]
+
+## 10 - noteworthy 3rd party actions
 
 - This is why GitHub Actions it's better than other CI tools from other vendors
 - Rich ecosystem
 
-## 11 - noteworthy actions
-
-- Java
-- Node
-- Docker
-- AWS Actions
-- Upload
-- Download
-- Checkout
+- [Java][36]
+- [Node][37]
+- [Docker][38]
+- [AWS Actions][39]
+- [Upload][40]
+- [Download][41]
+- [Checkout][42]
 
 There's much, much more!
 
-## 12 - writing good CI/CD pipelines
+## 11 - writing good CI/CD pipelines
 
 - Run tests
 - Publish packages or images
 - For GitOps, update _desired state_ on IaC manifests files
 
 ## Conclusion
+
+This playground is intended to be simple, educational.
+
+It's up to you combine the techniques sampled here to build real things.
 
 [0]: https://github.com/nektos/act?tab=readme-ov-file#installation-through-package-managers
 [1]: https://github.com/sombriks/gh-actions-playground/actions
@@ -200,10 +204,15 @@ There's much, much more!
 [31]: imgs/repository-variables.png
 [32]: .github/workflows/08-using-secrets.yml
 [33]: https://github.com/sombriks/gh-actions-playground/actions/runs/7189569566/job/19581317663#step:2:2
-[34]:
-[35]:
-[36]:
-[37]:
-[38]:
-[39]:
-[40]:
+[34]: .github/workflows/09-steps.yml
+[35]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsteps
+[36]: https://github.com/marketplace/actions/setup-java-jdk
+[37]: https://github.com/marketplace/actions/setup-node-js-environment
+[38]: https://github.com/marketplace/actions/build-and-push-docker-images
+[39]: https://github.com/aws-actions
+[40]: https://github.com/marketplace/actions/upload-a-build-artifact
+[41]: https://github.com/marketplace/actions/download-a-build-artifact
+[42]: https://github.com/marketplace/actions/checkout
+[43]:
+[44]:
+[45]:

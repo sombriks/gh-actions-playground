@@ -1,0 +1,37 @@
+name: 09 - Steps
+
+on:
+    workflow_dispatch: 
+
+jobs:
+    i-have-7-steps:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "hello world!"
+
+            - name: Second step
+              run: echo 'this was the second step'
+            
+            - id: third-step
+              name: Step 3
+              run: echo '3rd and beyond!'
+            
+            - name: Step 4
+              if: false
+              run: echo "i never ever will run"
+            
+            - name: Step 5
+              id: step-5
+              run: |
+                echo 'i can have several commands into a single step'
+                echo "custom_result=$(date +'%Y')" >> $GITHUB_OUTPUT
+                echo "go_ahead=yes" >> $GITHUB_OUTPUT
+
+            - name: Step 6
+              uses: actions/checkout@v4
+            
+            - name: Step 7
+              if: ${{ steps.third-step.conclusion == 'success' }}
+              run: | 
+                echo "I can check on previous steps: ${{steps.step-5.outputs.custom_result}}"
+                git status
