@@ -102,20 +102,24 @@ More details [here][4].
 
 ## 07 - [environment variables][29]
 
-- The repository itself can contribute with custom execution
-- Use [GitHub CLI][2] to list, set or remove variables
-- If using [act][0], create a `.env` file to define variables
+- The repository itself can contribute with custom variables
+- Use [GitHub CLI][2] to list, set or remove [repository variables][30]
+- If using [act][0], create a `.vars` file to define variables
+- With `act` there is also a `.env` file but we talk about it later
 
 ```bash
-# ~/github/gh-actions-playground/.env
-X="some value from env"
+# ~/github/gh-actions-playground/.vars
+X="some value from vars"
 ```
 
-## 08 - secrets
+![repository-variables.png][31]
+
+## 08 - [secrets][32]
 
 - Very useful to interact with the world outside the repo
 - Define secrets via web console settings
 - Or use GitHub CLI to create them, pretty handy!
+- With act, just put it inside a .env file!
 
 ## 09 - steps
 
@@ -178,9 +182,9 @@ There's much, much more!
 [27]: https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs
 [28]: imgs/job-output.png
 [29]: .github/workflows/07-environment-variable.yml
-[30]:
-[31]:
-[32]:
+[30]: https://docs.github.com/en/actions/learn-github-actions/variables#using-contexts-to-access-variable-values
+[31]: imgs/repository-variables.png
+[32]: .github/workflows/08-using-secrets.yml
 [33]:
 [34]:
 [35]:

@@ -10,7 +10,7 @@ jobs:
     use-one-variable:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "${{env.X}}" # gh variable set X or .env file for act
+            - run: echo "${{vars.X}}" # gh variable set X or .env file for act
 
     use-another-variable:
         runs-on: ubuntu-latest
@@ -30,7 +30,7 @@ jobs:
             - run: echo "${{env.C}}"
               env:
                 C: 'other'
-            - run: echo "I have access to X and A, ${{env.X}} ${{env.A}}"
+            - run: echo "I have access to X and A, ${{vars.X}} ${{env.A}}"
             - run: echo "I don't have access to C or B, ${{env.B}} ${{env.C}}"
     
     about-redefines:
