@@ -98,9 +98,18 @@ More details [here][4].
 - You can define [outputs values][27] so other jobs can check on
 - For dynamic outputs check the `$GITHUB_OUTPUT` variable usage
 
-## 07 - environment variables
+![job-output.png][28]
+
+## 07 - [environment variables][29]
 
 - The repository itself can contribute with custom execution
+- Use [GitHub CLI][2] to list, set or remove variables
+- If using [act][0], create a `.env` file to define variables
+
+```bash
+# ~/github/gh-actions-playground/.env
+X="some value from env"
+```
 
 ## 08 - secrets
 
@@ -167,8 +176,8 @@ There's much, much more!
 [25]: imgs/job-input.png
 [26]: .github/workflows/06-job-outputs.yml
 [27]: https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs
-[28]:
-[29]:
+[28]: imgs/job-output.png
+[29]: .github/workflows/07-environment-variable.yml
 [30]:
 [31]:
 [32]:
