@@ -213,6 +213,3 @@ It's up to you combine the techniques sampled here to build real things.
 [40]: https://github.com/marketplace/actions/upload-a-build-artifact
 [41]: https://github.com/marketplace/actions/download-a-build-artifact
 [42]: https://github.com/marketplace/actions/checkout
-[43]:
-[44]:
-[45]:
