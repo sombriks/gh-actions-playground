@@ -123,7 +123,7 @@ X="some value from vars"
 - Note: **secret values are [not echoed][33] on logs**
 
 ```bash
-# ~/github/gh-actions-playground/.vars
+# ~/github/gh-actions-playground/.secrets
 X=10
 MY_SECRET="not telling you!"
 ```
