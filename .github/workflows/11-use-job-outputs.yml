@@ -1,0 +1,14 @@
+name: 11 - use job output
+
+on:
+  workflow_dispatch: 
+
+jobs:
+  use-previous-one:
+    uses: ./.github/workflows/10-job-outputs.yml
+  check-outputs:
+    runs-on: [ubuntu-latest]
+    needs: [use-previous-one]
+    steps:
+      - run: echo ${{needs.use-previous-one.outputs.out1}}
+      - run: echo ${{github.jobs.create-outputs.outputs.out1}}

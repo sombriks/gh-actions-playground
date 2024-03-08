@@ -1,0 +1,19 @@
+name: 10 - create job Outputs
+
+on:
+  workflow_dispatch: 
+  workflow_call: 
+
+jobs:
+  create-outputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create out1
+        id: step1
+        run: echo "OUT1=123" >> $GITHUB_OUTPUT
+      - name: Create out2
+        id: step2
+        run: echo "OUT2=456" >> $GITHUB_OUTPUT
+    outputs:
+      out1: ${{steps.step1.outputs.OUT1}}
+      out2: ${{steps.step2.outputs.OUT2}}
