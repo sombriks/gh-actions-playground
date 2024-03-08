@@ -143,7 +143,14 @@ MY_SECRET="not telling you!"
 
 More details of what is possible [here][35]
 
-## 10 - noteworthy 3rd party actions
+## 10 / 11 - define outputs for reusable workflows
+
+- Define a [reusable workflow][43] with an output section
+- Define a workflow with a [job consuming the reusable][44]
+
+More info [here][45] and [here][46].
+
+## Noteworthy 3rd party actions
 
 - This is why GitHub Actions it's better than other CI tools from other vendors
 - Rich ecosystem
@@ -158,7 +165,7 @@ More details of what is possible [here][35]
 
 There's much, much more!
 
-## 11 - writing good CI/CD pipelines
+## Writing good CI/CD pipelines
 
 - Run tests
 - Publish packages or images
@@ -213,3 +220,7 @@ It's up to you combine the techniques sampled here to build real things.
 [40]: https://github.com/marketplace/actions/upload-a-build-artifact
 [41]: https://github.com/marketplace/actions/download-a-build-artifact
 [42]: https://github.com/marketplace/actions/checkout
+[43]: ./.github/workflows/10-job-outputs.yml
+[44]: ./.github/workflows/11-use-job-outputs.yml
+[45]: https://stackoverflow.com/a/73702649/420096
+[46]: https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-outputs-from-a-reusable-workflow

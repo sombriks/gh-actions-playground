@@ -3,6 +3,11 @@ name: 10 - create job Outputs
 on:
   workflow_dispatch: 
   workflow_call: 
+    outputs:
+      out1:
+        value: ${{ jobs.create-outputs.outputs.out1 }}
+      out2:
+        value: ${{ jobs.create-outputs.outputs.out2 }}
 
 jobs:
   create-outputs:

@@ -11,4 +11,4 @@ jobs:
     needs: [use-previous-one]
     steps:
       - run: echo ${{needs.use-previous-one.outputs.out1}}
-      - run: echo ${{github.jobs.create-outputs.outputs.out1}}
+      - run: echo ${{needs.use-previous-one.outputs.out2}}
