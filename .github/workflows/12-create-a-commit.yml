@@ -12,8 +12,8 @@ jobs:
       - run: |
           echo "Created at $(date +'%0Y.%0m.%0d') from commit ${GITHUB_SHA::7} via ${{github.event_name}}" > stamp.txt
           git status
-          git config user.name "Leonardo Silveira"
-          git config user.email "sombriks@gmail.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .
           git commit -m "update stamp.txt"
           git push -u origin main
