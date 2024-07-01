@@ -13,4 +13,4 @@ jobs:
       - run: echo 'github ${{toJSON(github)}}'
       - uses: actions/checkout@v4
       - run: gh pr list
-      - run: gh pr comment ${{github.event.number}} -b 'this commend was made by the action'
+      - run: gh pr comment ${{github.event.number}} -b 'this comment was made by the action'
