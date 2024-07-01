@@ -1,4 +1,4 @@
-name: Create a comment on a pull request
+name: 13 - Create a comment on a pull request
 on:
   pull_request:
     branches:
@@ -8,3 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'running from ${{github.ref_name}}'
+      - run: gh pr list
