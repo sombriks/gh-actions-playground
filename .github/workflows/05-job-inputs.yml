@@ -1,11 +1,12 @@
 name: 05 - Job Inputs
 
 on:
-  workflow_dispatch: 
+  workflow_dispatch:
     inputs:
       anything:
         type: string
         required: false
+        description: 'sampling inputs'
         default: 'is possible'
 
 jobs:

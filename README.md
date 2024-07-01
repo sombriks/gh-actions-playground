@@ -150,6 +150,12 @@ More details of what is possible [here][35]
 
 More info [here][45] and [here][46].
 
+## 12 - create a commit
+
+- Modify something in the repo
+- Does not trigger other workflows
+- Can manipulate several branches, see [checkout action][47] for details.
+
 ## Noteworthy 3rd party actions
 
 - This is why GitHub Actions it's better than other CI tools from other vendors
@@ -224,3 +230,4 @@ It's up to you combine the techniques sampled here to build real things.
 [44]: ./.github/workflows/11-use-job-outputs.yml
 [45]: https://stackoverflow.com/a/73702649/420096
 [46]: https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-outputs-from-a-reusable-workflow
+[47]: https://github.com/actions/checkout
