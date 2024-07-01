@@ -1,0 +1,16 @@
+name: 13 - Create a comment on a pull request
+on:
+  pull_request:
+    branches:
+      - main
+env:
+  GH_TOKEN: ${{ github.token }}
+jobs:
+  comment-if-its-a-pr:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - run: echo 'github ${{toJSON(github)}}'
+      - uses: actions/checkout@v4
+      - run: gh pr list
+      - run: gh pr comment ${{github.event.number}} -b 'this commend was made by the action'
