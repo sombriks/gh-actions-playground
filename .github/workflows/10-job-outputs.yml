@@ -1,8 +1,18 @@
 name: 10 - create job Outputs
 
 on:
-  workflow_dispatch: 
-  workflow_call: 
+  workflow_dispatch:
+    inputs:
+      some_key:
+        default: foo
+        description: an input via workflow dispatch
+        options: [foo, bar]
+  workflow_call:
+    inputs:
+      some_key:
+        default: bar
+        description: an input via workflow call
+        type: string
     outputs:
       out1:
         value: ${{ jobs.create-outputs.outputs.out1 }}
@@ -13,6 +23,8 @@ jobs:
   create-outputs:
     runs-on: ubuntu-latest
     steps:
+      - name: Echo the input
+        run: echo "${{inputs.some_key}} via ${{github.event_name}}"
       - name: Create out1
         id: step1
         run: echo "OUT1=123" >> $GITHUB_OUTPUT
