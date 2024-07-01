@@ -13,4 +13,4 @@ jobs:
       - run: echo 'github.base_ref ${{github.base_ref}}'
       - uses: actions/checkout@v4
       - run: gh pr list
-      - run: gh pr comment $${{github. }}
+      # - run: gh pr comment $${{github. }}
