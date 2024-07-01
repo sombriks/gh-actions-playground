@@ -152,9 +152,14 @@ More info [here][45] and [here][46].
 
 ## 12 - create a commit
 
-- Modify something in the repo
+- Useful to modify something in the repo as [part of the workflow][48]
 - Does not trigger other workflows
 - Can manipulate several branches, see [checkout action][47] for details.
+
+## 13 - create comments
+
+- Useful to report some important result as [part of the workflow][49]
+- Event needed is a pull request
 
 ## Noteworthy 3rd party actions
 
@@ -231,3 +236,5 @@ It's up to you combine the techniques sampled here to build real things.
 [45]: https://stackoverflow.com/a/73702649/420096
 [46]: https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-outputs-from-a-reusable-workflow
 [47]: https://github.com/actions/checkout
+[48]: .github/workflows/12-create-a-commit.yml
+[49]: .github/workflows/13-comment-a-pr.yml
