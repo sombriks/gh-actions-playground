@@ -8,6 +8,7 @@ env:
 jobs:
   comment-if-its-a-pr:
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - run: echo 'github ${{toJSON(github)}}'
       - uses: actions/checkout@v4
