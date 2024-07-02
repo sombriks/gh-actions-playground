@@ -173,6 +173,7 @@ More info [here][45] and [here][46].
 - [Upload][40]
 - [Download][41]
 - [Checkout][42]
+- [Cache][50]
 
 There's much, much more!
 
@@ -238,3 +239,4 @@ It's up to you combine the techniques sampled here to build real things.
 [47]: https://github.com/actions/checkout
 [48]: .github/workflows/12-create-a-commit.yml
 [49]: .github/workflows/13-comment-a-pr.yml
+[50]: https://github.com/actions/cache
