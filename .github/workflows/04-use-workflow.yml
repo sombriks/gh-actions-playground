@@ -1,8 +1,7 @@
+---
 name: 04 - Use another workflow
-
 on:
     workflow_dispatch: 
-
 jobs:
     use-sequcence-workflow:
-        uses: ./.github/workflows/03-sequence-jobs.yml
+        uses: .github/workflows/03-sequence-jobs.yml

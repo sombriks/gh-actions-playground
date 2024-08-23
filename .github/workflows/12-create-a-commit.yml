@@ -1,3 +1,4 @@
+---
 name: 12 - create a commit
 on:
   workflow_dispatch:
@@ -19,3 +20,4 @@ jobs:
           git commit -m "update stamp.txt"
           git push
           echo "commits from actions does not trigger actions"
+          

@@ -48,6 +48,7 @@ More possibilities [here][3].
 - One workflow can house several jobs
 - Jobs will run in **parallel** unless you do something about it
   - make jobs `needs` other jobs
+  - run jobs `if` some condition is true
 
 More details [here][4].
 
@@ -68,7 +69,8 @@ More details [here][4].
 ## 02 - [have two jobs][12]
 
 - Remember, runs in [parallel][13]!
-- Pretty much like two distinct workflows, but sharing rent of a workflow file
+- Pretty much like two distinct workflows, but sharing rent on the same workflow
+  file. Useful in more complex builds.
 
 ![two-jobs.png][14]
 
@@ -146,7 +148,7 @@ More details of what is possible [here][35]
 ## 10 / 11 - define outputs for reusable workflows
 
 - Define a [reusable workflow][43] with an output section
-- Define a workflow with a [job consuming the reusable][44]
+- Define a workflow with a [job consuming the reusable][44] one
 
 More info [here][45] and [here][46].
 
@@ -160,6 +162,17 @@ More info [here][45] and [here][46].
 
 - Useful to report some important result as [part of the workflow][49]
 - Event needed is a pull request
+
+## 14 - create a reusable action
+
+The key difference is a reusable workflow will eat an entire job, while a
+reusable action only a step.
+
+Actions can't access env or secrets directly, you must pass inputs.
+
+You can define custom actions locally to the repo or use 3rd party ones.
+
+[More details][51].
 
 ## Noteworthy 3rd party actions
 
@@ -190,53 +203,105 @@ This playground is intended to be simple, educational.
 It's up to you combine the techniques sampled here to build real things.
 
 [0]: https://github.com/nektos/act?tab=readme-ov-file#installation-through-package-managers
+
 [1]: https://github.com/sombriks/gh-actions-playground/actions
+
 [2]: https://cli.github.com/
+
 [3]: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
+
 [4]: https://docs.github.com/en/actions/using-jobs/using-conditions-to-control-job-execution
+
 [5]: .github/workflows/00-hello-world.yml
+
 [6]: https://github.com/sombriks/gh-actions-playground/actions/workflows/00-hello-world.yml
+
 [7]: https://github.com/sombriks/gh-actions-playground/actions/runs/7162121699/job/19498652966#step:2:5
+
 [8]: imgs/manual-dispatch.png
+
 [9]: .github/workflows/01-it-happens-on-push.yml
+
 [10]: https://github.com/sombriks/gh-actions-playground/actions/runs/7162222469/job/19498893130#step:2:5
+
 [11]: imgs/on-push.png
+
 [12]: .github/workflows/02-two-jobs.yml
+
 [13]: https://github.com/sombriks/gh-actions-playground/actions/runs/7175366895/job/19538528783
+
 [14]: imgs/two-jobs.png
+
 [15]: .github/workflows/03-sequence-jobs.yml
+
 [16]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idneeds
+
 [17]: imgs/job-needs.png
+
 [18]: .github/workflows/04-use-workflow.yml
+
 [19]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_call
+
 [20]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#onworkflow_dispatch
+
 [21]: https://github.com/marketplace?type=actions
+
 [22]: imgs/use-another-workflow.png
+
 [23]: .github/workflows/05-job-inputs.yml
+
 [24]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#example-of-onworkflow_dispatchinputs
+
 [25]: imgs/job-input.png
+
 [26]: .github/workflows/06-job-outputs.yml
+
 [27]: https://docs.github.com/en/actions/using-jobs/defining-outputs-for-jobs
+
 [28]: imgs/job-output.png
+
 [29]: .github/workflows/07-environment-variable.yml
+
 [30]: https://docs.github.com/en/actions/learn-github-actions/variables#using-contexts-to-access-variable-values
+
 [31]: imgs/repository-variables.png
+
 [32]: .github/workflows/08-using-secrets.yml
+
 [33]: https://github.com/sombriks/gh-actions-playground/actions/runs/7189569566/job/19581317663#step:2:2
+
 [34]: .github/workflows/09-steps.yml
+
 [35]: https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idsteps
+
 [36]: https://github.com/marketplace/actions/setup-java-jdk
+
 [37]: https://github.com/marketplace/actions/setup-node-js-environment
+
 [38]: https://github.com/marketplace/actions/build-and-push-docker-images
+
 [39]: https://github.com/aws-actions
+
 [40]: https://github.com/marketplace/actions/upload-a-build-artifact
+
 [41]: https://github.com/marketplace/actions/download-a-build-artifact
+
 [42]: https://github.com/marketplace/actions/checkout
+
 [43]: ./.github/workflows/10-job-outputs.yml
+
 [44]: ./.github/workflows/11-use-job-outputs.yml
+
 [45]: https://stackoverflow.com/a/73702649/420096
+
 [46]: https://docs.github.com/en/actions/using-workflows/reusing-workflows#using-outputs-from-a-reusable-workflow
+
 [47]: https://github.com/actions/checkout
+
 [48]: .github/workflows/12-create-a-commit.yml
+
 [49]: .github/workflows/13-comment-a-pr.yml
+
 [50]: https://github.com/actions/cache
+
+[51]: https://docs.github.com/en/actions/sharing-automations/creating-actions/creating-a-composite-action#creating-an-action-metadata-file

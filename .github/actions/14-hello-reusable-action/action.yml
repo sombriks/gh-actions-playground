@@ -1,0 +1,20 @@
+---
+name: Hello Reusable Action
+description: Simple, locally defined, reusable action so we can write less verbose actions.
+inputs:
+  name:
+    description: Who we're going to greet
+    required: true
+outputs:
+  greet:
+    description: The formatted greeting message
+    value: ${{steps.do-greet.outputs.greet}}
+runs:
+  using: composite
+  steps:
+    - id: do-greet
+      shell: bash
+      run: |
+        echo "greet=$(echo 'Be very welcome, ${{inputs.name}})'" >> $GITHUB_OUTPUT
+
+          

@@ -1,38 +1,32 @@
+---
 name: 07 - Environment variables
-
 on:
     workflow_dispatch: 
-
 env:
     A: 'a reasonable value'
-
 jobs:
     use-one-variable:
         runs-on: ubuntu-latest
         steps:
             - run: echo "${{vars.X}}" # gh variable set X or .env file for act
-
     use-another-variable:
         runs-on: ubuntu-latest
         steps:
             - run: echo "${{env.A}}"
-
     use-another-one:
         runs-on: ubuntu-latest
         env:
             B: 'my other value'
         steps:
             - run: echo "${{env.B}}"
-
     and-another:
         runs-on: ubuntu-latest
         steps:
             - run: echo "${{env.C}}"
               env:
-                C: 'other'
+                  C: 'other'
             - run: echo "I have access to X and A, ${{vars.X}} ${{env.A}}"
             - run: echo "I don't have access to C or B, ${{env.B}} ${{env.C}}"
-    
     about-redefines:
         runs-on: ubuntu-latest
         env:

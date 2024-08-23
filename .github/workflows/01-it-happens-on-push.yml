@@ -1,9 +1,8 @@
+---
 name: 01 - Hello world but on git push!
-
 on:
-    push: 
+    push:
         branches: ['*'] 
-
 jobs:
     hello-world-on-push:
         runs-on: ubuntu-latest

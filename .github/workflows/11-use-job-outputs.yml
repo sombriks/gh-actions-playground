@@ -1,8 +1,7 @@
+---
 name: 11 - use job output
-
 on:
   workflow_dispatch: 
-
 jobs:
   use-previous-one:
     uses: ./.github/workflows/10-job-outputs.yml
